@@ -12,3 +12,12 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryRef = document.querySelector('#gallery');
+const addElToGalleryRef = images.map(element => {
+  const addItemToGallery = `<li class="gallery__item"><img src="${element.url}" alt="${element.alt}" width=320></li>`;
+  return addItemToGallery;
+});
+galleryRef.classList.add('gallery');
+galleryRef.insertAdjacentHTML("beforeend", addElToGalleryRef.join(''));
+galleryRef.style = "margin-top: 50px; list-style:none; display: flex; justify-content: space-around; align-items: center;"
