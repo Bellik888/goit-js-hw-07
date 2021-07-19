@@ -43,6 +43,7 @@ function createBoxes(amount) {
 
 function onDestroyCollection() {
     refs.wrapperDiv.innerHTML = '';
+    refs.input.value = '';
 };
 
 

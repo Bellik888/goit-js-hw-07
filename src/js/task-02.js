@@ -15,10 +15,10 @@ const ingredients = [
 
 const ingredientsRef = document.querySelector('#ingredients');
 
-ingredients.forEach(ingredient => {
+const ingr = ingredients.map(ingredient => {
   const item = document.createElement('li');
   item.textContent = ingredient;
-  ingredientsRef.appendChild(item);
+  return item;
 });
+ingredientsRef.append(...ingr);
 
-console.log(ingredientsRef);
