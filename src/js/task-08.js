@@ -34,12 +34,17 @@ function createBoxes(amount) {
    for (let i = 0; i < `${amount}`; i++) {
        arr.push(i);
    }
+    let startWidth = 20;
+    let startHeight = 20;
     arr.map(el => {
         const div = document.createElement('div');
-        div.setAttribute('style', 'display: block; margin: 20px auto;  background-color: red; width: 30px; height: 30px');
+        div.setAttribute('style', 'display: block; margin: 20px auto;  background-color: rgb(220,20,60); ');
+        div.style.width = (startWidth += 10) + 'px';
+        div.style.height = (startHeight += 10) + 'px';
         refs.wrapperDiv.append(div);
     })
 };
+
 
 function onDestroyCollection() {
     refs.wrapperDiv.innerHTML = '';
